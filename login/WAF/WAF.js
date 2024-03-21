@@ -12,7 +12,8 @@ list_iframe.forEach(function(element) {
         first_iframe.style.display = "none";
         
         element.classList.add('active');
-        var new_src = '/html/' + element.getElementsByTagName('span')[1].innerText + '.html';
+        var new_src = '/html/' + element.parentElement.getAttribute('data-name') + '/' +
+         element.getElementsByTagName('span')[1].innerText + '.html';
         iframe.src = new_src;
         // iframe.classList.remove('hide');
         iframe.parentElement.style.display = "block";
