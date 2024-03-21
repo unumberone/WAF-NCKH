@@ -11753,6 +11753,11 @@ table.dataTable,table.dataTable td,table.dataTable th {
     margin-right: 15px
 }
 
+.hide {
+    /* display: none !important; */
+    max-height: 0; 
+}
+
 .inactive a {
     color: #666!important
 }
@@ -11803,6 +11808,15 @@ table.dataTable,table.dataTable td,table.dataTable th {
 .nav.parent-menu>li>a {
     color: #e7e7e7;
     font-weight: 500
+}
+.child-menu {
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+/* Hiệu ứng chuyển động khi hiện */
+.child-menu:not(.hide) {
+    max-height: 500px; /* Giá trị tùy chỉnh */
 }
 
 .nav.child-menu {
